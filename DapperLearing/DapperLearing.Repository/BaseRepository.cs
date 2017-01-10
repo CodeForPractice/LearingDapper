@@ -21,7 +21,11 @@ namespace DapperLearing.Repository
         /// <returns></returns>
         public string GetTestDataConn()
         {
-            return testDataConn?.ToString();
+            if (testDataConn != null)
+            {
+                return testDataConn.ToString();
+            }
+            return string.Empty;
         }
     }
 }

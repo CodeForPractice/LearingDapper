@@ -60,7 +60,13 @@ namespace DapperLearing.First
 
             foreach (var item in result)
             {
-                Console.WriteLine(item.CarName + "图片个数：" + item.PicList?.Count.ToString());
+                //Console.WriteLine(item.CarName + "图片个数：" + item.PicList?.Count.ToString());
+                int imageCount = 0;
+                if (item.PicList != null)
+                {
+                    imageCount = item.PicList.Count;
+                }
+                Console.WriteLine(item.CarName + "图片个数：" + imageCount.ToString());
             }
 
             Console.Read();
